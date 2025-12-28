@@ -193,7 +193,6 @@ html {
 .product-card__image {
   width: 100%;
   height: auto;
-  object-fit: cover;
   aspect-ratio: 1 / 1;
   display: block;
   margin-bottom: 10px;
@@ -272,7 +271,6 @@ html {
   width: 100%;
   height: auto;
   aspect-ratio: auto;
-  object-fit: cover;
   display: block;
 }
 
