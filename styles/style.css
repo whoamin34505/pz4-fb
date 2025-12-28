@@ -193,7 +193,6 @@ html {
 .product-card__image {
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
   display: block;
   margin-bottom: 10px;
 }
@@ -238,20 +237,20 @@ html {
 }
 
 .popular__grid {
-  column-count: 3;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin-bottom: 30px;
+  auto-rows: max-content;
 }
 
 .popular__item {
   min-width: 0;
 }
 
-.popular__item {
-  break-inside: avoid;
-  margin-bottom: 20px;
+.popular__item:first-child {
+  grid-column: span 2;
 }
-
 .popular__button {
   display: inline-block;
   background-color: #f0f0f0;
@@ -270,7 +269,6 @@ html {
 .popular .product-card__image {
   width: 100%;
   height: auto;
-  aspect-ratio: auto;
   display: block;
 }
 
@@ -625,8 +623,8 @@ html {
   }
 
   .popular__grid {
-    column-count: 2;
-    column-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .popular__item {
@@ -789,8 +787,8 @@ html {
   }
 
   .popular__grid {
-    column-count: 1;
-    column-gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .popular__item {
@@ -798,7 +796,14 @@ html {
   }
 
   .popular__item:first-child {
-    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .popular .product-card__image {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 250px;
   }
 
   .product-card__info {
@@ -964,7 +969,6 @@ html {
 
   .product-card__image {
     margin-bottom: 8px;
-    aspect-ratio: 1 / 1;
     max-height: 220px;
     width: auto;
     margin-left: auto;
@@ -991,8 +995,8 @@ html {
   }
 
   .popular__grid {
-    column-count: 1;
-    column-gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .popular__item {
@@ -1004,7 +1008,9 @@ html {
   }
 
   .popular .product-card__image {
+    max-width: 100%;
     height: auto;
+    width: auto;
   }
 
   .product-card__info {
@@ -1278,11 +1284,13 @@ html {
   }
 
   .popular__item:first-child {
-    grid-row: span 1;
+    grid-column: span 1;
   }
 
   .popular .product-card__image {
+    max-width: 100%;
     height: auto;
+    width: auto;
   }
 
   .product-card__info {
@@ -1426,17 +1434,4 @@ html {
     width: 18px;
     height: 18px;
   }
-}
-
-.popular__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
-  align-items: start;
-}
-
-
-.popular__item:first-child {
-  grid-row: span 2;
 }
