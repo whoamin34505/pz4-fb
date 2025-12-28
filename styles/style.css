@@ -723,6 +723,12 @@ html {
     padding: 20px 15px;
   }
 
+  .banner__image {
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+  }
+
   .banner__title {
     font-size: 20px;
   }
@@ -886,6 +892,12 @@ html {
 
   .banner__content {
     padding: 15px 10px;
+  }
+
+  .banner__image {
+    max-height: 250px;
+    width: 100%;
+    height: auto;
   }
 
   .banner__title {
