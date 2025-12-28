@@ -1427,3 +1427,16 @@ html {
     height: 18px;
   }
 }
+
+.popular__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: start;
+}
+
+
+.popular__item:first-child {
+  grid-row: span 2;
+}
