@@ -220,6 +220,11 @@ html {
   background-color: #e0e0e0;
 }
 
+.section__button-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Popular */
 .popular {
   padding: 40px 80px;
@@ -235,20 +240,19 @@ html {
 }
 
 .popular__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 30px;
   align-items: start;
 }
 
 .popular__item {
-  flex: 1 1 calc(33.333% - 14px);
-  min-width: 200px;
+  min-width: 0;
 }
 
 .popular__item:first-child {
-  flex: 1 1 calc(33.333% - 14px);
+  grid-row: span 2;
 }
 
 .popular__button {
@@ -626,17 +630,16 @@ html {
   }
 
   .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
   .popular__item {
-    flex: 1 1 calc(50% - 8px);
-    min-width: auto;
     text-align: center;
   }
 
   .popular__item:first-child {
-    flex: 1 1 calc(50% - 8px);
+    grid-row: span 1;
     text-align: center;
   }
 
@@ -790,16 +793,16 @@ html {
   }
 
   .popular__grid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .popular__item {
-    flex: 1 1 100%;
     text-align: center;
   }
 
   .popular__item:first-child {
-    flex: 1 1 100%;
+    grid-row: span 1;
   }
 
   .product-card__info {
@@ -992,11 +995,11 @@ html {
   }
 
   .popular__grid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .popular__item {
-    flex: 1 1 100%;
     text-align: center;
   }
 
@@ -1270,16 +1273,16 @@ html {
   }
 
   .popular__grid {
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 
   .popular__item {
-    flex: 1 1 100%;
     text-align: center;
   }
 
   .popular__item:first-child {
-    flex: 1 1 100%;
+    grid-row: span 1;
   }
 
   .popular .product-card__image {
