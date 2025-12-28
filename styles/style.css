@@ -179,16 +179,15 @@ html {
 }
 
 .products__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 30px;
 }
 
 .product-card {
-  flex: 1 1 calc(25% - 15px);
   text-align: left;
-  min-width: 200px;
+  min-width: 0;
 }
 
 .product-card__image {
@@ -240,19 +239,18 @@ html {
 }
 
 .popular__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
   margin-bottom: 30px;
-  align-items: start;
 }
 
 .popular__item {
   min-width: 0;
 }
 
-.popular__item:first-child {
-  grid-row: span 2;
+.popular__item {
+  break-inside: avoid;
+  margin-bottom: 20px;
 }
 
 .popular__button {
@@ -271,10 +269,10 @@ html {
 }
 
 .popular .product-card__image {
-  height: clamp(220px, 35vw, 375px);
   width: 100%;
+  height: auto;
   aspect-ratio: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -615,12 +613,11 @@ html {
   }
 
   .products__grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
   .product-card {
-    flex: 1 1 calc(50% - 8px);
-    min-width: auto;
     text-align: center;
   }
 
@@ -630,16 +627,15 @@ html {
   }
 
   .popular__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    column-count: 2;
+    column-gap: 15px;
   }
 
   .popular__item {
     text-align: center;
   }
 
-  .popular__item:first-child {
-    grid-row: span 1;
+  .popular__item {
     text-align: center;
   }
 
@@ -766,11 +762,11 @@ html {
   }
 
   .products__grid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .product-card {
-    flex: 1 1 100%;
     text-align: center;
   }
 
@@ -793,8 +789,8 @@ html {
   }
 
   .popular__grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    column-count: 1;
+    column-gap: 10px;
   }
 
   .popular__item {
@@ -958,11 +954,11 @@ html {
   }
 
   .products__grid {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .product-card {
-    flex: 1 1 100%;
     text-align: center;
   }
 
@@ -995,8 +991,8 @@ html {
   }
 
   .popular__grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    column-count: 1;
+    column-gap: 10px;
   }
 
   .popular__item {
