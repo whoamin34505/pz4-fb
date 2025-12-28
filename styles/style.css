@@ -236,21 +236,28 @@ html {
   margin-bottom: 30px;
 }
 
-.popular__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+/* Masonry */
+.masonry {
+  column-count: 3;
+  column-gap: 1em;
   margin-bottom: 30px;
-  auto-rows: max-content;
 }
 
-.popular__item {
-  min-width: 0;
+.masonry-item {
+  display: inline-block;
+  margin: 0 0 1em 0;
+  width: 100%;
+  break-inside: avoid;
+  overflow: hidden;
+  position: relative;
 }
 
-.popular__item:first-child {
-  grid-column: span 2;
+.masonry-item .product-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 .popular__button {
   display: inline-block;
   background-color: #f0f0f0;
@@ -647,10 +654,22 @@ html {
 
   .about__text-wrapper {
     padding: 0 20px;
+    text-align: center;
   }
 
   .about__title {
     font-size: 24px;
+    text-align: center;
+  }
+
+  .about__image-wrapper {
+    margin-top: 30px;
+  }
+
+  .about__image {
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
   }
 
   .links {
@@ -684,6 +703,10 @@ html {
 
 /* Мобильные в альбомной ориентации (меньше 768px) */
 @media (max-width: 767px) {
+  .masonry {
+    column-count: 1;
+  }
+
   .header {
     padding: 15px 15px;
   }
