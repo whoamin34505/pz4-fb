@@ -35,4 +35,4 @@
 * `assets/img/` - изображения
 * `assets/icons/` - иконки
 
-[Просмотреть на GitHub Pages](https://whoamin34505.github.io/pz3-fb/)
+[Просмотреть на GitHub Pages](https://whoamin34505.github.io/pz4-fb/)
