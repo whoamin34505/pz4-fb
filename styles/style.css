@@ -757,6 +757,7 @@ html {
   .products__title {
     font-size: 20px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .products__grid {
@@ -784,6 +785,7 @@ html {
   .popular__title {
     font-size: 20px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .popular__grid {
@@ -1425,4 +1427,3 @@ html {
     height: 18px;
   }
 }
-
