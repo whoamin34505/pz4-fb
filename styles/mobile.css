@@ -45,17 +45,25 @@
 @media (max-width: 991px) {
   .header {
     padding: 20px 20px;
+    justify-content: center;
   }
 
   .header__nav {
-    order: 3;
+    order: 2;
     width: 100%;
     margin-top: 15px;
+  }
+
+  .header__logo-link {
+    order: 1;
+    margin: 0 auto;
   }
 
   .nav-menu__list {
     gap: 20px;
     font-size: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .banner {
@@ -189,17 +197,89 @@
 
 /* Мобильные в альбомной ориентации (меньше 768px) */
 @media (max-width: 767px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1002;
+    justify-content: flex-start;
+  }
+
+  .header__logo-link {
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 80px 30px 30px;
+    margin-top: 0;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .header__nav.active {
+    right: 0;
+  }
+
+  .nav-menu__list {
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+  }
+
+  .nav-menu__item {
+    width: 100%;
+  }
+
+  .nav-menu__link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-menu__link:hover {
+    background: transparent;
+    color: #2a254b;
+    padding-left: 10px;
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    display: block;
+  }
+
   .masonry {
     column-count: 1;
   }
 
   .header {
     padding: 15px 15px;
-  }
-
-  .header__left,
-  .header__right {
-    flex: 0 1 auto;
   }
 
   .header__logo {
@@ -372,18 +452,12 @@
     padding: 12px 10px;
   }
 
-  .header__left,
-  .header__right {
-    gap: 10px;
+  .header__nav {
+    width: 100%;
   }
 
   .header__logo {
     max-width: 120px;
-  }
-
-  .header__icon {
-    width: 16px;
-    height: 16px;
   }
 
   .nav-menu__list {
