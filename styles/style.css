@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-size: 17px;
+}
+
 
 * {
   box-sizing: border-box;
@@ -346,7 +350,7 @@ html {
   border: none;
   border-radius: 0;
   background-color: #e8e8e8;
-  font-size: 14px;
+  font-size: 17px;
   min-width: 250px;
 }
 
@@ -360,7 +364,7 @@ html {
   color: white;
   border: none;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.3s ease;
@@ -416,7 +420,7 @@ html {
   color: #8d6dff;
   text-decoration: none;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 17px;
   transition: background-color 0.3s ease;
 }
 
@@ -446,7 +450,7 @@ html {
 .links__heading {
   color: white;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .links__list {
@@ -460,7 +464,7 @@ html {
 .links__link {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
   transition: opacity 0.3s ease;
 }
 
@@ -475,7 +479,7 @@ html {
 .links__subscribe-text {
   color: white;
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .links__form {
@@ -489,7 +493,7 @@ html {
   border-radius: 0;
   background-color: #544d80;
   color: #4e4d93;
-  font-size: 14px;
+  font-size: 17px;
   flex: 1;
   min-width: 200px;
 }
@@ -504,7 +508,7 @@ html {
   color: #8d6dff;
   border: none;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.3s ease;
@@ -525,7 +529,7 @@ html {
 
 .footer__copyright {
   color: white;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .footer__socials {
