@@ -41,4 +41,8 @@
 * `assets/img/` - изображения
 * `assets/icons/` - иконки
 
+## QR-код сайта
+
+![QR-код сайта](qr-code.png)
+
 [Просмотреть на GitHub Pages](https://whoamin34505.github.io/pz4-fb/)
