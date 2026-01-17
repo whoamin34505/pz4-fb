@@ -21,6 +21,7 @@ scrollTopButton.addEventListener('click', () => {
 // Гамбургер-меню
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
+const headerEl = document.querySelector('.header');
 
 if (menuToggle && mainNav) {
 	const navOverlay = document.createElement('div');
@@ -40,10 +41,26 @@ if (menuToggle && mainNav) {
 	navOverlay.addEventListener('click', toggleMenu);
 
 	const navLinks = document.querySelectorAll('.nav-menu__link');
+
+	function scrollWithOffset(target) {
+		const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+		const rect = target.getBoundingClientRect();
+		const offsetTop = rect.top + window.pageYOffset - headerHeight - 8; // небольшой запас
+		window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+	}
+
 	navLinks.forEach(link => {
-		link.addEventListener('click', () => {
-			if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
-				toggleMenu();
+		link.addEventListener('click', (e) => {
+			const href = link.getAttribute('href') || '';
+			if (href.startsWith('#') && href.length > 1) {
+				e.preventDefault();
+				const target = document.querySelector(href);
+				if (target) {
+					scrollWithOffset(target);
+				}
+				if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+					toggleMenu();
+				}
 			}
 		});
 	});
