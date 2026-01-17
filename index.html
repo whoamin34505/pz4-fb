@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/assets/icons/icon-site.ico">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
     <title>Avion</title>
 </head>
 <body>
     <header class="header">
-        <div class="header__left">
-            <a href="#" class="header__link">
-            <img class="header__icon" src="assets/icons/Search.png" alt="Иконка поиска"></a>
-        </div>
+        <a href="#" class="header__logo-link"><img class="header__logo" src="assets/img/logo-site.png" alt="Логотип компании"></a>
 
-        <a href="#" class="header__link"><img class="header__logo" src="assets/img/logo-site.png" alt="Логотип компании"></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+        </button>
 
-        <div class="header__right">
-            <a href="#" class="header__link"><img class="header__icon" src="assets/icons/Shopping-cart.png" alt="Иконка корзины"></a>
-            <a href="#" class="header__link"><img class="header__icon" src="assets/icons/User-avatar.png" alt="Иконка пользователя"></a>
-        </div>
-
-        <nav class="header__nav nav-menu">
+        <nav class="header__nav nav-menu" id="mainNav">
             <ul class="nav-menu__list">
                 <li class="nav-menu__item"><a href="#features" class="nav-menu__link">Features</a></li>
                 <li class="nav-menu__item"><a href="#products" class="nav-menu__link">New ceramics</a></li>
@@ -196,6 +193,9 @@
 			</div>
         </section>
     </main>
+    
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+    
     <footer class="footer">
         <p class="footer__copyright">Copyright 2022 Avion LTD</p>
         <div class="footer__socials">
@@ -207,5 +207,7 @@
             <a href="#" class="footer__social-link"><img class="footer__social-icon" src="assets/icons/Logo-pinterest.png" alt="Логотип Pinterest"></a>
         </div>
     </footer>
+    
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
